@@ -14,7 +14,7 @@ object Main extends App {
   println("Press ENTER to see the next step")
 
   solution foreach { step =>
-    println(step)
+    println(s"${step._1}->${step._2}")
     scala.io.StdIn.readLine()
   }
 
