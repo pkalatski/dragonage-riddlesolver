@@ -11,8 +11,12 @@ object Main extends App {
 
   val solution = Solver.solve(riddle)
 
+  println("Press ENTER to see the next step")
+
   solution foreach { step =>
     println(step)
     scala.io.StdIn.readLine()
   }
+
+  println("DONE")
 }
