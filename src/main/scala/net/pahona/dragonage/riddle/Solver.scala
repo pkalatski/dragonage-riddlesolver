@@ -21,7 +21,8 @@ object Solver {
   }
 
   private[this] def solve(riddle: Riddle, startingPoints: Set[Int]): Solution = {
-    require(!startingPoints.isEmpty)
+    require(!startingPoints.isEmpty,
+      s"Unable to find the solution for riddle ${riddle}. Please make sure that input is correct.")
 
     solve(riddle, Nil, startingPoints.head) match {
       case Some(solution) => solution
